@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Lock, Mail, ShieldCheck, ArrowLeft, AlertCircle } from "lucide-react";
+import { Lock, Mail, ArrowLeft, AlertCircle } from "lucide-react";
 
 export const metadata = {
   title: "Admin Login | WakeUp Nepal Builders CMS",
@@ -49,17 +49,6 @@ export default async function AdminLogin({
             </div>
           )}
 
-          {/* Credentials Helper Callout */}
-          <div className="login-demo-badge">
-            <div style={{ display: "flex", alignItems: "center", gap: "6px", fontWeight: 700, color: "var(--navy-dark)", fontSize: "12.5px" }}>
-              <ShieldCheck size={16} style={{ color: "var(--crimson)" }} /> Default Admin Access
-            </div>
-            <div style={{ fontSize: "12px", color: "var(--text-muted)", marginTop: "4px", lineHeight: 1.4 }}>
-              <strong>Email:</strong> admin@wakeupnepalbuilders.com<br />
-              <strong>Password:</strong> Admin@12345
-            </div>
-          </div>
-
           {/* Form Fields */}
           <div className="login-field-group">
             <label htmlFor="email">Email Address</label>
@@ -69,7 +58,6 @@ export default async function AdminLogin({
                 id="email"
                 type="email"
                 name="email"
-                defaultValue="admin@wakeupnepalbuilders.com"
                 placeholder="admin@wakeupnepalbuilders.com"
                 required
                 autoComplete="email"
@@ -85,7 +73,6 @@ export default async function AdminLogin({
                 id="password"
                 type="password"
                 name="password"
-                defaultValue="Admin@12345"
                 placeholder="••••••••••••"
                 required
                 autoComplete="current-password"
