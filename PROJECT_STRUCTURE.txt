@@ -1,0 +1,41 @@
+wake-up-nepal-builders/
+├── app/
+│   ├── admin/
+│   │   ├── login/
+│   │   └── (dashboard)/
+│   │       ├── services/[id]/
+│   │       ├── materials/[id]/
+│   │       ├── projects/[id]/
+│   │       ├── inquiries/
+│   │       ├── settings/
+│   │       └── users/
+│   ├── api/
+│   │   ├── admin/login/
+│   │   ├── admin/logout/
+│   │   └── contact/
+│   ├── about/
+│   ├── services/
+│   ├── materials/
+│   ├── projects/
+│   ├── contact/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── admin/
+│   └── site/
+├── lib/
+│   ├── auth.ts
+│   ├── content.ts
+│   ├── data.ts
+│   └── prisma.ts
+├── prisma/
+│   ├── migrations/
+│   ├── schema.prisma
+│   └── seed.ts
+├── public/assets/
+├── preview/
+├── docker-compose.yml
+├── package.json
+├── .env.example
+└── README.md

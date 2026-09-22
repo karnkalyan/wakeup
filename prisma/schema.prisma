@@ -1,0 +1,124 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  EDITOR
+}
+
+enum InquiryStatus {
+  NEW
+  CONTACTED
+  CLOSED
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         UserRole @default(EDITOR)
+  active       Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model CompanySetting {
+  id          Int      @id @default(1)
+  companyName String   @default("WakeUp Nepal Builders Pvt. Ltd.")
+  tagline     String   @default("Building Trust, Building Homes.")
+  phone1      String   @default("9864033256")
+  phone2      String   @default("9851188296")
+  email       String   @default("wakeupnepalbuilders@gmail.com")
+  address     String   @default("New Baneshwor, Kathmandu, Nepal")
+  heroTitleNp String   @db.Text
+  heroTitleEn String   @default("Build with Confidence")
+  heroText    String   @db.Text
+  updatedAt   DateTime @updatedAt
+}
+
+model Stat {
+  id        Int     @id @default(autoincrement())
+  label     String
+  value     String
+  icon      String?
+  sortOrder Int     @default(0)
+  active    Boolean @default(true)
+}
+
+model Service {
+  id        Int      @id @default(autoincrement())
+  title     String
+  slug      String   @unique
+  excerpt   String   @db.Text
+  content   String?  @db.LongText
+  icon      String?
+  image     String?
+  sortOrder Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Material {
+  id        Int      @id @default(autoincrement())
+  title     String
+  slug      String   @unique
+  description String? @db.Text
+  image     String?
+  sortOrder Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  category    String
+  location    String
+  excerpt     String?  @db.Text
+  content     String?  @db.LongText
+  coverImage  String?
+  featured    Boolean  @default(false)
+  active      Boolean  @default(true)
+  completedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Inquiry {
+  id          Int           @id @default(autoincrement())
+  name        String
+  phone       String
+  email       String?
+  location    String?
+  projectType String?
+  area        String?
+  message     String        @db.Text
+  status      InquiryStatus @default(NEW)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model TeamMember {
+  id        Int      @id @default(autoincrement())
+  name      String
+  role      String
+  bio       String?  @db.Text
+  image     String?
+  phone     String?
+  email     String?
+  sortOrder Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
