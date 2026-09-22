@@ -55,18 +55,7 @@ export default function MaterialsPage() {
         <section className="section">
           <div className="container">
             {/* FEATURED CENTRAL WAREHOUSE BANNER */}
-            <div
-              style={{
-                position: "relative",
-                borderRadius: "var(--radius)",
-                overflow: "hidden",
-                marginBottom: "36px",
-                minHeight: "280px",
-                display: "flex",
-                alignItems: "center",
-                boxShadow: "var(--shadow-lg)"
-              }}
-            >
+            <div className="featured-banner-wrap">
               <Image
                 src="/assets/assets (15).png"
                 alt="WakeUp Nepal Builders Construction Materials Supply Showroom & Warehouse"
@@ -74,33 +63,16 @@ export default function MaterialsPage() {
                 priority
                 style={{ objectFit: "cover" }}
               />
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background:
-                    "linear-gradient(90deg, rgba(7, 25, 54, 0.94) 0%, rgba(7, 25, 54, 0.78) 55%, rgba(7, 25, 54, 0.3) 100%)"
-                }}
-              />
-              <div
-                style={{
-                  position: "relative",
-                  zIndex: 2,
-                  padding: "36px 44px",
-                  maxWidth: "700px",
-                  color: "#ffffff"
-                }}
-              >
+              <div className="featured-banner-overlay" />
+              <div className="featured-banner-content">
                 <span
                   className="nepali-bold-highlight font-nepali"
                   style={{ fontSize: "13px", marginBottom: "10px", display: "inline-block" }}
                 >
                   केन्द्रीय सामग्री आपूर्ति केन्द्र
                 </span>
-                <h2 style={{ fontSize: "28px", color: "#ffffff", margin: "4px 0 10px" }}>
-                  Certified Construction Materials Supply Center
-                </h2>
-                <p style={{ color: "#d5e8f5", fontSize: "15px", margin: "0 0 20px" }}>
+                <h2>Certified Construction Materials Supply Center</h2>
+                <p>
                   Direct supply of Grade 43/53 cement, earthquake-resistant Fe-500D TMT rebar, river sand, aggregates,
                   clay bricks, designer tiles, and MEP fixtures delivered directly to your construction site across Nepal.
                 </p>

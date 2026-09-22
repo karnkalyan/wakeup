@@ -31,18 +31,7 @@ export default function ProjectsPage() {
         <section className="section">
           <div className="container">
             {/* FEATURED ARCHITECTURAL LANDMARKS SHOWCASE BANNER */}
-            <div
-              style={{
-                position: "relative",
-                borderRadius: "var(--radius)",
-                overflow: "hidden",
-                marginBottom: "40px",
-                minHeight: "320px",
-                display: "flex",
-                alignItems: "center",
-                boxShadow: "var(--shadow-lg)"
-              }}
-            >
+            <div className="featured-banner-wrap">
               <Image
                 src="/assets/assets (16).png"
                 alt="WakeUp Nepal Builders Architectural Landmarks in Nepal"
@@ -50,33 +39,16 @@ export default function ProjectsPage() {
                 priority
                 style={{ objectFit: "cover" }}
               />
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background:
-                    "linear-gradient(90deg, rgba(7, 25, 54, 0.94) 0%, rgba(7, 25, 54, 0.76) 50%, rgba(7, 25, 54, 0.3) 100%)"
-                }}
-              />
-              <div
-                style={{
-                  position: "relative",
-                  zIndex: 2,
-                  padding: "40px 48px",
-                  maxWidth: "680px",
-                  color: "#ffffff"
-                }}
-              >
+              <div className="featured-banner-overlay" />
+              <div className="featured-banner-content">
                 <span
                   className="nepali-bold-highlight font-nepali"
                   style={{ fontSize: "13px", marginBottom: "12px", display: "inline-block" }}
                 >
                   आधुनिक निर्माण तथा इन्जिनियरिङ
                 </span>
-                <h2 style={{ fontSize: "32px", color: "#ffffff", margin: "4px 0 12px", lineHeight: 1.2 }}>
-                  Engineering Masterpieces Across Nepal
-                </h2>
-                <p style={{ color: "#d5e8f5", fontSize: "15.5px", margin: "0 0 24px", lineHeight: 1.65 }}>
+                <h2>Engineering Masterpieces Across Nepal</h2>
+                <p>
                   From luxury hillside villas and residential homes to modern corporate commercial headquarters and
                   heritage retrofitting, explore structures designed and delivered with precision, durability, and elegance.
                 </p>

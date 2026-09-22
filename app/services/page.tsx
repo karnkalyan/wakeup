@@ -31,18 +31,7 @@ export default function ServicesPage() {
         <section className="section">
           <div className="container">
             {/* FEATURED STRUCTURAL & TURNKEY BANNER */}
-            <div
-              style={{
-                position: "relative",
-                borderRadius: "var(--radius)",
-                overflow: "hidden",
-                marginBottom: "40px",
-                minHeight: "300px",
-                display: "flex",
-                alignItems: "center",
-                boxShadow: "var(--shadow-lg)"
-              }}
-            >
+            <div className="featured-banner-wrap">
               <Image
                 src="/assets/assets (13).png"
                 alt="WakeUp Nepal Builders Structural & Turnkey Construction"
@@ -50,33 +39,16 @@ export default function ServicesPage() {
                 priority
                 style={{ objectFit: "cover" }}
               />
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background:
-                    "linear-gradient(90deg, rgba(7, 25, 54, 0.94) 0%, rgba(7, 25, 54, 0.78) 50%, rgba(7, 25, 54, 0.3) 100%)"
-                }}
-              />
-              <div
-                style={{
-                  position: "relative",
-                  zIndex: 2,
-                  padding: "36px 44px",
-                  maxWidth: "680px",
-                  color: "#ffffff"
-                }}
-              >
+              <div className="featured-banner-overlay" />
+              <div className="featured-banner-content">
                 <span
                   className="nepali-bold-highlight font-nepali"
                   style={{ fontSize: "13px", marginBottom: "10px", display: "inline-block" }}
                 >
                   इन्जिनियरिङ उत्कृष्टता तथा संरचनात्मक सुरक्षा
                 </span>
-                <h2 style={{ fontSize: "30px", color: "#ffffff", margin: "4px 0 10px", lineHeight: 1.2 }}>
-                  Seismic-Resistant &amp; Turnkey Construction Services
-                </h2>
-                <p style={{ color: "#d5e8f5", fontSize: "15px", margin: "0 0 20px" }}>
+                <h2>Seismic-Resistant &amp; Turnkey Construction Services</h2>
+                <p>
                   Every project is supervised by qualified structural civil engineers. We take care of architectural planning,
                   soil investigation, municipality permits, foundation excavation, RCC framework, MEP installations, and luxury finishing.
                 </p>

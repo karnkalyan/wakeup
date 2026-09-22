@@ -113,24 +113,21 @@ export default function AboutPage() {
                     alt="Engineers and clients reviewing architectural plans at WakeUp Nepal Builders"
                     width={900}
                     height={600}
-                    style={{ display: "block", width: "100%", height: "420px", objectFit: "cover" }}
+                    style={{ display: "block", width: "100%", height: "auto", minHeight: "260px", maxHeight: "420px", objectFit: "cover" }}
                   />
                 </div>
                 <div
                   style={{
-                    position: "absolute",
-                    bottom: "-20px",
-                    left: "20px",
                     background: "var(--navy-dark)",
                     color: "#ffffff",
-                    padding: "16px 24px",
+                    padding: "16px 20px",
                     borderRadius: "14px",
                     boxShadow: "var(--shadow)",
-                    maxWidth: "340px",
-                    borderLeft: "4px solid var(--crimson)"
+                    borderLeft: "4px solid var(--crimson)",
+                    marginTop: "14px"
                   }}
                 >
-                  <strong style={{ fontSize: "16px", display: "block", color: "var(--crimson-light)" }}>
+                  <strong style={{ fontSize: "15px", display: "block", color: "var(--crimson-light)" }}>
                     One Responsible Partner
                   </strong>
                   <span style={{ fontSize: "13px", color: "#d2e4f0" }}>

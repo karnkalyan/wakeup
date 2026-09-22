@@ -47,17 +47,12 @@ export default async function TeamPage() {
                 style={{
                   background: "linear-gradient(135deg, #0e2a47 0%, #071936 100%)",
                   borderRadius: "24px",
-                  padding: "48px 52px",
                   color: "#ffffff",
-                  display: "grid",
-                  gridTemplateColumns: "auto 1fr",
-                  gap: "48px",
-                  alignItems: "center",
                   boxShadow: "0 16px 36px rgba(7, 25, 54, 0.18)",
                 }}
                 className="team-ceo-card"
               >
-                <div style={{ position: "relative", width: "220px", height: "260px", flexShrink: 0, borderRadius: "18px", overflow: "hidden", border: "4px solid rgba(220,20,60,0.6)", boxShadow: "0 10px 25px rgba(0,0,0,0.3)" }}>
+                <div style={{ position: "relative", width: "200px", height: "240px", flexShrink: 0, borderRadius: "18px", overflow: "hidden", border: "4px solid rgba(220,20,60,0.6)", boxShadow: "0 10px 25px rgba(0,0,0,0.3)" }}>
                   <Image
                     src={ceo.image || "/assets/ceo.jpeg"}
                     alt={ceo.name}
@@ -70,16 +65,16 @@ export default async function TeamPage() {
                   <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(220, 20, 60, 0.2)", border: "1px solid var(--crimson)", padding: "4px 14px", borderRadius: "999px", fontSize: "12.5px", fontWeight: 700, color: "#ff859b", marginBottom: "12px" }}>
                     <Award size={14} /> Executive Leadership
                   </div>
-                  <h2 style={{ color: "#ffffff", fontSize: "32px", margin: "0 0 6px", fontWeight: 800 }}>
+                  <h2 style={{ color: "#ffffff", fontSize: "clamp(24px, 3.5vw, 32px)", margin: "0 0 6px", fontWeight: 800 }}>
                     {ceo.name}
                   </h2>
                   <div style={{ fontSize: "16px", color: "var(--orange)", fontWeight: 700, marginBottom: "16px" }}>
                     {ceo.role}
                   </div>
-                  <p style={{ color: "#d8ebfa", fontSize: "15.5px", lineHeight: 1.7, marginBottom: "22px", maxWidth: "680px" }}>
+                  <p style={{ color: "#d8ebfa", fontSize: "15px", lineHeight: 1.7, marginBottom: "22px", maxWidth: "680px" }}>
                     {ceo.bio || "Leading WakeUp Nepal Builders with a mission to deliver transparent, engineering-driven construction and reliable materials supply across Nepal."}
                   </p>
-                  <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", alignItems: "center" }}>
+                  <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
                     <Link href="/about#ceo-message" className="btn btn-orange btn-sm">
                       Read Full CEO Message →
                     </Link>
@@ -111,8 +106,8 @@ export default async function TeamPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "28px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                gap: "24px",
               }}
             >
               {rest.map((member: any) => (
